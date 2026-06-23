@@ -21,7 +21,7 @@ $$ |  $$ |\$$$$$$$ |$$ |  $$ |\$$$$$$$ |$$ | $$ | $$ |\$$$$$$$ |$$ |  $$ |
 """
 
 def get_random_sentence():
-    sentences = pd.read_csv(os.path.abspath('./sentence_list.csv'))
+    sentences = pd.read_csv(os.path.join(os.path.dirname(__file__), 'sentence_list.csv'))
     
     idx = random.randint(0, len(sentences.index) - 1)
 
